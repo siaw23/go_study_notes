@@ -1,0 +1,7 @@
+package lesson_one
+
+import "fmt"
+
+func main() {
+	fmt.Println("Hello, World!")
+}
