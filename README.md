@@ -1,4 +1,4 @@
-# Personal Go Notes ✍️
+# Go Programming Language Study Notes ✍️
 These are personal notes taken from [Get Programming with Go](https://www.manning.com/books/get-programming-with-go), a well thought out book by Nathan Youngman and Roger Peppé. I highly recommend you buy the book for a real learning experience.
 
 [Herein lie notes](https://github.com/siaw23/learning_go_notes/blob/main/notes.md) I took for myself for reference and revisions.

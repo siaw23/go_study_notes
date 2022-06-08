@@ -52,3 +52,78 @@ Or on a single line like:
 ```go
 height, width = 50, 50
 ```
+
+# Lesson Three
+
+In some languages, some values might be considered *truthy* or *falsy*. Values like `nil` in Ruby are *falsy* and values like `0` and `""`are *truthy*, just not `true` itself. This isn't so in Go. Go has only true and false values and they are `true` and `false`, surprise! 
+
+There are a few ways to get boolean values. Using comparison operators like `==` and `>=` return booleans. Some fuctions from the standard library also return booleans, like:
+
+```go
+var transport = "taxi"
+var word = string.Contains(transport, "taxi") // => true
+```
+
+Go has a single equality operate... `==`. Unlike JS and PHP that have both `==` and `===`.
+
+Branching is straight-forward:
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+  var age = 20
+
+  if age == 18 {
+    fmt.Println("Almost not a minor, come in.")
+  } else if age > 20 {
+    fmt.Println("Not a minor.")
+  } else {
+    fmt.Println("Come back in a few years' time.")
+  }
+}
+```
+
+There's also the `switch` for branching:
+
+```go
+var name = "Jordan"
+
+switch name {
+case "Mike":
+  fmt.Print("Mike")
+case "John", "Lisa":
+  fmt.Print("Nice names")
+default:
+  fmt.Print("No name") 
+}
+```
+
+There's a more concise form of the `switch` statement in code [here](https://github.com/siaw23/learning_go_notes/blob/main/lesson_three.md) that also show the use of the `fallthrough` keyword.
+
+Go has logical operators, `||` and `&&` for *or* and *and* respectively. And a "not" operator `!`.
+
+Looping can be done, in several forms with the `for` keyword:
+
+```go
+package main
+
+import (
+  "fmt"
+  "time"
+)
+
+func main() {
+  var count = 3
+
+  for count > 0 {
+    fmt.Println(count)
+    time.Sleep(time.Second)
+    count--
+  }
+
+  fmt.Println("Go!")
+}
+```
