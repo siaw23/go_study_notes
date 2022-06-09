@@ -10,5 +10,3 @@ You're welcome to add and improve on the notes here, fix typos, factual errors a
 1. Clone the repo with `git clone https://github.com/siaw23/learning_go_notes.git`.
 2. Create a branch with your additions or subtractions.
 3. Push your branch to create a PR. 
-
-Your contributions are very much welcome!
