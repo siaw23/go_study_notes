@@ -146,3 +146,45 @@ if num := rand.Int(3); num == 0 {
 }
 // You can use short declartion in a `switch` statement too.
 ```
+
+# Lesson 05
+
+Capstone Excercise
+
+# Lesson 06
+
+`float32` and `float64` are 2 of Go's 15 numeric types. The following are equivalent ways to declare a `float64`:
+
+```go 
+distance := 256.248
+var distance = 256.248
+var distance float64 = 256.248
+```
+
+Go infers the type of a variable by evaluating the value on the right side of the declaration, making `var distance float64 = 256.248` a bit unncecessary. Wen you declare a variable with a number and a decimal point, the type will always be a `float64`. [Real numbers](https://en.wikipedia.org/wiki/Real_number) are inferred as `float64`. You need to specify the type if you want any of the other numeric types.
+
+`float64` is a 64-bit floating point type (double precision) while `float32` is 32-bit, requiring 8 and 4 bytes in memory.
+
+Each type has a *zero value*, that is a default value that's used a placeholder when you don't declare a value with a value. The zero value of `float64` is `0.0`.
+So in this:
+
+```go
+var price float64
+```
+
+The value of `price` is `0.0`
+
+You can use the `%f` very to format printed values with `Printf`. 
+
+Examples:
+
+```go
+fmt.Printf("%.2f", value)
+fmt.Printf("%3.2f", value)
+
+// 3 is width, 2 is precision
+```
+
+If the width is unspecified, `Printf` will use the number of characters necessary to
+display the value.
+
