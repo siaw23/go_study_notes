@@ -3,7 +3,7 @@ These are personal notes taken from [Get Programming with Go](https://www.mannin
 
 Herein lie notes I took for myself for reference and revisions.
 
-# Lesson 01 
+# Lesson 01 Hello, World!
 
 Go unlike Ruby, is a compiled programming language. You can have a feel of Go on the [official playground](https://go.dev/play/) that runs in the browser, keep in mind however, that the output of browser compiler might be cached so your variables could be holding hold values even if the variable values on the screen change.
 
@@ -53,7 +53,7 @@ Or on a single line like:
 height, width = 50, 50
 ```
 
-# Lesson 03 
+# Lesson 03 Loops And Branches
 
 In some languages, some values might be considered *truthy* or *falsy*. Values like `nil` in Ruby are *falsy* and values like `0` and `""`are *truthy*, just not `true` itself. This isn't so in Go. Go has only true and false values and they are `true` and `false`, surprise! 
 
@@ -128,7 +128,7 @@ func main() {
 }
 ```
 
-# Lesson 04
+# Lesson 04 Variable Scope
 
 Much like many languages, variables in Go have a scope, that is, a region within a portion of the code where these variables cann be accessed. `{` and `}` demacate this regions. Variables inside the curly braces cannot be accessed out of it. The `case` and `default` keywords also define a scope.
 
@@ -151,7 +151,7 @@ if num := rand.Int(3); num == 0 {
 
 Capstone Excercise
 
-# Lesson 06
+# Lesson 06 Real Numbers
 
 `float32` and `float64` are 2 of Go's 15 numeric types. The following are equivalent ways to declare a `float64`:
 
@@ -210,6 +210,21 @@ The following table shows 8 architectiure-independent integer types:
 `%T` used with `Printf` will tell the type of a value. Example:
 
 ```golang
+val bool = false
 fmt.Printf("Type: %T Value: %v\n", val, val)
+// Type: bool Value: false
 ```
+
+Integer ranges wrap over when they overflow. Example:
+
+```golang
+zero = 0 
+zero--
+fmt.Println(zero) // 255
+// 0 is uint, -1 of that wraps to 255 in binary
+```
+
+Integer types should carefully be chosen to avoid wrapping.
+
+# 08 Big Numbers
 
