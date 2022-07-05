@@ -188,3 +188,6 @@ fmt.Printf("%3.2f", value)
 If the width is unspecified, `Printf` will use the number of characters necessary to
 display the value.
 
+# 07 Whole Numbers
+
+

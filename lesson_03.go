@@ -1,4 +1,4 @@
-package main
+package three
 
 import "fmt"
 
