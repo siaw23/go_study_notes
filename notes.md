@@ -228,3 +228,26 @@ Integer types should carefully be chosen to avoid wrapping.
 
 # 08 Big Numbers
 
+Go has a `big` package to handle gigantic numbers and will infer a number with exponents like `41.3e12` as `float64`.
+
+`big` provides three types:
+
+```golang
+big.Int // for big ints
+big.Float 
+big.Rat // for fractions like 1/3
+```
+
+There are two ways to create a `big.Int`:
+
+```golang
+secondsPerDay := big.NewInt(86400)
+// OR
+secondsPerDay := new(bing.Int)
+secondsPerDay.SetString("864000", 10) // 10 indicates base (decimal in this case)
+```
+
+Constants in Go can be untyped, unlike variables whose type is inferred. While `const distance uint64 = 24000000000000000000` will overflow with an error constants like `const distance = 24000000000000000000` won't.
+
+Untyped constants must be converted to typed variables when passed to functions.
+
