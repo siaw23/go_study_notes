@@ -251,3 +251,24 @@ Constants in Go can be untyped, unlike variables whose type is inferred. While `
 
 Untyped constants must be converted to typed variables when passed to functions.
 
+# 09 Multilingual Text
+
+Backticks indicate a raw string literal.
+
+```golang
+fmt.Println("Hello,\nWorld!")
+// Hello,
+// World!
+fmt.Println(`Hello,\n World!`)
+// Hello,\n World!
+```
+`rune` is an alias for `int32` that Go uses to represent a single Unicode code point. A `byte` is an alias for `uint8` intended for binary data. A `byte` can also be use for English characters as defined by ASCII, a subset of Unicode.
+
+```golang
+var pi rune = 800 
+// The above is equivelent to the snippet below
+var pi int32 = 800
+```
+
+Strings in Go are immutable.
+
