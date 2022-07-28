@@ -272,3 +272,52 @@ var pi int32 = 800
 
 Strings in Go are immutable.
 
+ # 10 Converting Between Types
+
+You can't mismatch types when performing operations. For example floating point numbers add to other floating point numbers. You need to convert one type to a common type if you need to perform operations on them. 
+
+## Numeric Type Conversion
+If you need to convert an integer to a floating type, you need to wrap that variable with the new type:
+
+```golang
+height := 188
+exactHeight := float64(188)
+
+// Similary you can do:
+
+height := int(400.0)
+```
+Go provides a `math` package that makes it possible to check whether a type conversion will result in an invalid value. Here's an example:
+
+```golang
+if num < math.MinInt16 || num > math.MinInt16 {
+  // handle out of range value
+}
+// This check the limits of `int16` integers.
+```
+## String Type Conversion
+To convert a `rune` or `byte` into a `string`, you can use the same syntax for numeric type conversions as above. 
+
+```golang
+var pi rune = 550
+fmt.Print(string(pi))
+```
+
+You can convert an integer to to string, if for example you're looking to interpolate the value of the integer to be printed. Here's how:
+
+```golang
+age := 54
+str := "I'm " + strconv.Itoa(age) + " years old."
+fmt.Print(str)
+```
+
+The `Itoa` stands for "integer to ASCII. On ther other side we have `strconv.Atoi` which is "ASCII to integer.
+
+## Boolean Type Conversion
+Just like the string conversion above, you can convert booleans to strings for the purpose of printing with format verbs for example. 
+
+```golang
+launch := true
+text := fmt.Sprintf("%v", launch)
+fmt.Println("Ready for launch:", text)
+```
