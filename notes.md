@@ -195,16 +195,7 @@ Go always picks `int` when inferring the type of a whole number.
 
 The following table shows 8 architectiure-independent integer types:
 
-| Type   	| Range                                                   	| Storage 	|
-|---------|:---------------------------------------------------------:|:---------:|
-| int8   	| -128 to 127                                             	| 8-bit   	|
-| uint8  	| 0 to 255                                                	| 8-bit   	|
-| int16  	| -32,768 to 32,767                                       	| 16-bit  	|
-| uint16 	| 0 to 65,535                                             	| 16-bit  	|
-| int32  	| -2,147,483,648 to 2,147,483,647                         	| 32-bit  	|
-| uint32 	| 0 to 4,294,967,295                                      	| 32-bit  	|
-| int64  	| -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 	| 64-bit  	|
-| uint64 	| 0 to 18,446,744,073,709,551,615                         	| 64-bit  	|
+![Architecture-independent integer types](/assets/digital_ocean_gopher_guides.png "Architecture-independent integer types")
 
 `%T` used with `Printf` will tell the type of a value. Example:
 
