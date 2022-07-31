@@ -3,7 +3,7 @@ These are personal notes taken from [Get Programming with Go](https://www.mannin
 
 Herein lie notes I took for myself for reference and revisions.
 
-# Lesson 01 Hello, World!
+# 01 Hello, World!
 
 Go unlike Ruby, is a compiled programming language. You can have a feel of Go on the [official playground](https://go.dev/play/) that runs in the browser, keep in mind however, that the output of browser compiler might be cached so your variables could be holding hold values even if the variable values on the screen change.
 
@@ -23,7 +23,7 @@ func main {
 
 In Go, the opening brace is on the same line as the `func` keyword, whereas the closing brace `}` is on its own line. This is the "one true brace style"([1TBS](https://en.wikipedia.org/wiki/Indentation_style#Variant:_1TBS_(OTBS))), your code won't work any other way. This is because code statements use to end with `;` until Gophers decided to make the compiler silently append these semicolons so don't don't have to, but we need to follow the 1TBS in exchange for this to work. 
 
-# Lesson 02 
+# 02 
 
 Just like other language, Go has constructs to print information to the screen. Among them are:
 
@@ -53,7 +53,7 @@ Or on a single line like:
 height, width = 50, 50
 ```
 
-# Lesson 03 Loops And Branches
+# Loops And Branches
 
 In some languages, some values might be considered *truthy* or *falsy*. Values like `nil` in Ruby are *falsy* and values like `0` and `""`are *truthy*, just not `true` itself. This isn't so in Go. Go has only true and false values and they are `true` and `false`, surprise! 
 
@@ -128,7 +128,7 @@ func main() {
 }
 ```
 
-# Lesson 04 Variable Scope
+# Variable Scope
 
 Much like many languages, variables in Go have a scope, that is, a region within a portion of the code where these variables cann be accessed. `{` and `}` demacate this regions. Variables inside the curly braces cannot be accessed out of it. The `case` and `default` keywords also define a scope.
 
@@ -147,11 +147,11 @@ if num := rand.Int(3); num == 0 {
 // You can use short declartion in a `switch` statement too.
 ```
 
-# Lesson 05
+# 05
 
 Capstone Excercise
 
-# Lesson 06 Real Numbers
+# Real Numbers
 
 `float32` and `float64` are 2 of Go's 15 numeric types. The following are equivalent ways to declare a `float64`:
 
@@ -325,3 +325,6 @@ fmt.Println("Ready for launch:", text)
 # 11 Capstone 
 
 # 12 Functions
+
+
+# 13 Methods

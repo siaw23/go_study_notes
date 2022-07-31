@@ -1,0 +1,1 @@
+These are personal notes taken from [Get Programming with Go](https://www.manning.com/books/get-programming-with-go), a well thought out book by Nathan Youngman and Roger Peppé. I highly recommend you buy the book for a real learning experience.
