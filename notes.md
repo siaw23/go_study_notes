@@ -23,7 +23,7 @@ func main {
 
 In Go, the opening brace is on the same line as the `func` keyword, whereas the closing brace `}` is on its own line. This is the "one true brace style"([1TBS](https://en.wikipedia.org/wiki/Indentation_style#Variant:_1TBS_(OTBS))), your code won't work any other way. This is because code statements use to end with `;` until Gophers decided to make the compiler silently append these semicolons so don't don't have to, but we need to follow the 1TBS in exchange for this to work. 
 
-# 02 
+# 02 Variables and Printing
 
 Just like other language, Go has constructs to print information to the screen. Among them are:
 
@@ -53,7 +53,7 @@ Or on a single line like:
 height, width = 50, 50
 ```
 
-# Loops And Branches
+# 03 Loops And Branches
 
 In some languages, some values might be considered *truthy* or *falsy*. Values like `nil` in Ruby are *falsy* and values like `0` and `""`are *truthy*, just not `true` itself. This isn't so in Go. Go has only true and false values and they are `true` and `false`, surprise! 
 
@@ -128,7 +128,7 @@ func main() {
 }
 ```
 
-# Variable Scope
+# 04 Variable Scope
 
 Much like many languages, variables in Go have a scope, that is, a region within a portion of the code where these variables cann be accessed. `{` and `}` demacate this regions. Variables inside the curly braces cannot be accessed out of it. The `case` and `default` keywords also define a scope.
 
@@ -147,11 +147,10 @@ if num := rand.Int(3); num == 0 {
 // You can use short declartion in a `switch` statement too.
 ```
 
-# 05
+# 05 Capstone 
 
-Capstone Excercise
 
-# Real Numbers
+# 06 Real Numbers
 
 `float32` and `float64` are 2 of Go's 15 numeric types. The following are equivalent ways to declare a `float64`:
 
@@ -326,5 +325,6 @@ fmt.Println("Ready for launch:", text)
 
 # 12 Functions
 
-
 # 13 Methods
+
+# 14 First-Class Functions
